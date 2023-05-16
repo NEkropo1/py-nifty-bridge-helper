@@ -3,3 +3,4 @@ venv
 idea
 .git
 .env
+**__pycache__
