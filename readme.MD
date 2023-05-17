@@ -38,8 +38,7 @@ Some documentation:
 
 Or use anything you need to work with endpoints.
 Some screenshots:
-![image](https://github.com/NEkropo1/py-nifty-bridge-helper/assets/107141441/f60af22f-e13f-40db-8611-06e4827be75f)
-![image](https://github.com/NEkropo1/py-nifty-bridge-helper/assets/107141441/17720e48-cede-4278-bcdf-8eb5ca4281e6)
-![image](https://github.com/NEkropo1/py-nifty-bridge-helper/assets/107141441/42c788cc-8ba1-4182-8dde-312cd84643ec)
-![image](https://github.com/NEkropo1/py-nifty-bridge-helper/assets/107141441/cde9cd18-b5c1-43d0-a65b-6f2f3091e337)
-![image](https://github.com/NEkropo1/py-nifty-bridge-helper/assets/107141441/d3dad2b0-d430-4416-96ff-f9847bca252f)
+![image](https://github.com/NEkropo1/py-nifty-bridge-helper/assets/107141441/c7bf537f-6f19-4e9e-966d-9c7709b6dc58)
+![image](https://github.com/NEkropo1/py-nifty-bridge-helper/assets/107141441/c320fb04-67a4-4432-9647-3dcece73d580)
+![image](https://github.com/NEkropo1/py-nifty-bridge-helper/assets/107141441/f3e5c074-b13e-4a86-98b6-b077ff11ff77)
+![image](https://github.com/NEkropo1/py-nifty-bridge-helper/assets/107141441/bc8d713c-7d31-4446-93cc-e7c51f5ddd62)
