@@ -5,7 +5,7 @@ from langchain.vectorstores.redis import Redis
 
 
 def similarity_search(query: str, rds: Redis) -> list[str]:
-    results = rds.similarity_search_limit_score(query=query, k=4, score_threshold=0.2)
+    results = rds.similarity_search_limit_score(query=query, k=4, score_threshold=0.1)
     if results:
         text_content = [result.page_content for result in results]
         return text_content
@@ -21,8 +21,9 @@ def generate_response(message: str = "", rds: Redis = None) -> str:
         chunks_set = set(text_chunks)
 
         response_message = (
-                f"Answer on this message: `{message}`" + "\n\n"
-                                                         "using only this info:" + "`" + "\n\n".join(chunks_set) + "`"
+                f"Answer on this message: `{message}`"
+                "\n\n"
+                "using only this info:" + "`" + "\n\n".join(chunks_set) + "`"
         )
         if len(response_message) <= 4096:
             prompt = response_message
@@ -31,7 +32,8 @@ def generate_response(message: str = "", rds: Redis = None) -> str:
                 messages=[
                     {
                         "role": "system",
-                        "content": "You are a helpful assistant which talks only about info related in user content."
+                        "content": "You are a helpful assistant which "
+                                   "talks only about info related in user content."
                     },
                     {"role": "user", "content": prompt}
                 ],
