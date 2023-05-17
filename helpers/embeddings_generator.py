@@ -1,3 +1,5 @@
+import os
+
 import openai
 
 from langchain.embeddings import OpenAIEmbeddings
@@ -63,10 +65,13 @@ def generate_embeddings_from_chunks(
         text_chunks: list[str],
 ) -> tuple[Redis, list[str]]:
     embeddings = OpenAIEmbeddings()
+    redis_host = os.getenv("REDIS_VECTOR_HOST")
+    redis_port = os.getenv("REDIS_VECTOR_PORT")
+    redis_url = f"redis://{redis_host}:{redis_port}"
     rds = Redis.from_texts_return_keys(
         texts=text_chunks,
         embedding=embeddings,
-        redis_url="redis://localhost:6379",
+        redis_url=redis_url,
         index_name="link"
     )
 

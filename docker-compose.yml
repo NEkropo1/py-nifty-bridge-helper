@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  fastapi-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - REDIS_VECTOR_HOST=${REDIS_VECTOR_HOST}
+      - REDIS_VECTOR_PORT=${REDIS_VECTOR_PORT}
+      - REDIS_VECTOR_DB=${REDIS_VECTOR_DB}
+      - X_API_KEY_TOKEN=${X_API_KEY_TOKEN}
+    depends_on:
+      - vectorrds
+    networks:
+      - my-network
+
+  vectorrds:
+    image: redis/redis-stack-server:latest
+    ports:
+      - "6379:6379"
+    networks:
+      - my-network
+
+networks:
+  my-network:
