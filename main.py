@@ -36,6 +36,6 @@ def send_message(request: MessageRequest = None, x_api_key_token: str = Header(d
     if x_api_key_token != os.getenv("X_API_KEY_TOKEN"):
         raise HTTPException(status_code=401, detail="Invalid API key")
 
-    response = generate_response(request.message, rds[0])
+    message = generate_response(request.message, rds[0])
 
-    return MessageResponse(response=response)
+    return MessageResponse(message=message)
