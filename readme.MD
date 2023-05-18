@@ -32,7 +32,7 @@ docker-compose up --build
 ```
 Now you will have app running on your device
 
-Some documentation:
+Some documentation:  
  -localhost:8000/docs#/ - Swagger API documentation  
  -localhost:8000/redoc/ - Redoc API documentation  
 
